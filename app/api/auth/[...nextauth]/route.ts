@@ -1,6 +1,2 @@
-import NextAuth from "next-auth"
-import GitHub from "next-auth/providers/github"
- 
-export const { handlers, auth } = NextAuth({
-  providers: [GitHub],
-})
+import { handlers } from "@/app/auth"; // Referring to the auth.ts we just created
+export const { GET, POST } = handlers;
